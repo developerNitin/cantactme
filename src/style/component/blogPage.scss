@@ -152,5 +152,9 @@ $fontS: "font-s";
   }
   .blog_page_description {
     padding: 25px;
+    max-width: 100%;
+  }
+  .blog_page_description_container {
+    padding: 0 35px;
   }
 }
