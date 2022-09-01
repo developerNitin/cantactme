@@ -1,0 +1,29 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+$xxlFont: 64px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4cffa5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#resume {
+  div {
+    h1 {
+      span {
+        color: $cColor;
+      }
+    }
+  }
+}

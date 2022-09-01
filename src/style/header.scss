@@ -1,0 +1,247 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4cffa5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#header {
+  padding: 50px 0;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  transition: 0.5s all ease;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.header_logo,
+.link_list {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  z-index: 3;
+}
+
+.header_logo {
+  margin-left: 55px;
+  overflow: hidden;
+  height: 40px;
+  a {
+    text-decoration: none;
+    height: 40px;
+    transition: 0.5s all ease;
+    &:hover {
+      margin-top: -80px;
+    }
+  }
+  h1 {
+    margin: 0;
+    height: 40px;
+    font-size: $mFont;
+    color: $dColor;
+    display: flex;
+    align-items: center;
+    font-family: $fontM;
+    font-weight: 500;
+    span {
+      color: $bColor;
+      margin-right: 4.5px;
+    }
+  }
+}
+
+.link_list {
+  justify-content: flex-end;
+  margin-right: 55px;
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 40px;
+    padding: 0;
+    li {
+      margin-left: 40px;
+      display: flex;
+      height: 40px;
+      overflow: hidden;
+      a {
+        color: $bColor;
+        font-size: $mFont;
+        text-decoration: none;
+        transition: 0.5s all ease;
+        font-family: $fontM;
+        font-weight: 500;
+        span {
+          display: flex;
+          height: 40px;
+          position: relative;
+          align-items: center;
+          // &::after {
+          //   content: url("../elements/chevron-down-solid.svg");
+          //   width: 11.5px;
+          //   margin: 3px 0 0 5px;
+          //   opacity: 0.7;
+          //   transition: 0.5s all ease;
+          // }
+        }
+        &:hover {
+          margin-top: -40px;
+          color: $dColor;
+          span {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile_navbar_button {
+  display: none;
+  width: 50%;
+  height: 40px;
+  margin-right: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+  a {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    span,
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      top: 50%;
+      height: 2px;
+      width: 100%;
+      background-color: $dColor;
+      transition: 0.3s all ease;
+    }
+    span,
+    &::after {
+      margin-top: 7px;
+    }
+  }
+}
+
+.mobile_navbar_button_crose {
+  a {
+    &::before {
+      display: none;
+    }
+    span {
+      transform: rotate(45deg);
+      margin: 8px 0 0 0;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      margin: -2px 0 0 0;
+    }
+  }
+}
+
+.active {
+  span {
+    color: $dColor;
+    &::after {
+      opacity: 1 !important;
+    }
+  }
+}
+
+#mobile_link_list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  top: -100vh;
+  transition: 0.5s all ease;
+  overflow: hidden;
+  ul {
+    margin: 100px 50px 0 50px;
+    padding: 0;
+    list-style: none;
+    li {
+      height: 45px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #212121;
+      a {
+        height: 90px;
+        color: $bColor;
+        text-decoration: none;
+        font-family: $fontM;
+        transition: 0.5s all ease;
+        span {
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &:hover {
+          margin-top: -45px;
+          color: $dColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .link_list {
+    display: none;
+  }
+  #mobile_link_list {
+    display: block;
+  }
+  .mobile_navbar_button {
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
+  #header {
+    padding: 30px 0 !important;
+  }
+  .header_logo {
+    margin-left: 35px;
+  }
+  .mobile_navbar_button {
+    margin-right: 35px;
+  }
+  #mobile_link_list {
+    ul {
+      margin: 100px 30px 0 30px;
+    }
+  }
+  #header_mask {
+    height: 100px !important;
+    div {
+      width: 0;
+      &:nth-child(1),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}

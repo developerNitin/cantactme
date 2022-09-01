@@ -1,0 +1,60 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4CFFA5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#followUs {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  color: $bColor;
+}
+
+.social_link {
+  display: flex;
+  flex-direction: column;
+  margin: 170px 50px 70px 0;
+  transition: 0.5s all ease;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      margin-top: 25px;
+      svg {
+        color: $bColor;
+        height: 16px;
+        &:hover {
+          color: $cColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .social_link {
+    display: none;
+  }
+}

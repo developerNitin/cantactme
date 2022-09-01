@@ -1,0 +1,69 @@
+#onLoad {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#onLoad div {
+  position: absolute;
+  z-index: 1000;
+  background-color: #1e1e1e;
+  width: 20%;
+  height: 100vh;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+#onLoad div:nth-child(1) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#onLoad div:nth-child(2) {
+  margin-left: 20%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+#onLoad div:nth-child(3) {
+  margin-left: 40%;
+}
+
+#onLoad div:nth-child(4) {
+  margin-left: 60%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+#onLoad div:nth-child(5) {
+  margin-left: 80%;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+@media (max-width: 750px) {
+  #onLoad div:nth-child(1) {
+    display: none;
+  }
+  #onLoad div:nth-child(2) {
+    margin-left: 0%;
+    width: 33.33%;
+  }
+  #onLoad div:nth-child(3) {
+    margin-left: 33.33%;
+    width: 33.33%;
+  }
+  #onLoad div:nth-child(4) {
+    margin-left: 66.66%;
+    width: 33.33%;
+  }
+  #onLoad div:nth-child(5) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=onLoad.css.map */

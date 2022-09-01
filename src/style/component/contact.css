@@ -1,0 +1,105 @@
+#contact .contact_info {
+  margin-bottom: 70px;
+  font-size: 16px;
+}
+
+#contact .contact_info .contact_info_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .contact_info .contact_info_sub div {
+  padding: 35px;
+  border: 1.5px solid #212121;
+  width: 322px;
+  text-align: center;
+  font-family: "font-r";
+  margin-top: 70px;
+  background-color: #101010;
+}
+
+#contact .contact_info .contact_info_sub div p {
+  margin-top: 0;
+}
+
+#contact .contact_info .contact_info_sub div span {
+  color: #bbbbbb;
+}
+
+#contact .contact_info .contact_info_sub:nth-child(1) div {
+  margin-top: 35px;
+}
+
+.contact_form {
+  padding: 35px;
+  border: 1.5px solid #212121;
+  background-color: #101010;
+  margin-bottom: 70px;
+}
+
+.contact_form form input,
+.contact_form form textarea {
+  color: #ffffff;
+  height: 49px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #212121;
+  width: 100%;
+  font-size: 16px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  margin-bottom: 30px;
+}
+
+.contact_form form input:focus,
+.contact_form form textarea:focus {
+  border-bottom: 1.5px solid #4cffa5;
+}
+
+.contact_form form textarea {
+  height: 102px;
+  padding-top: 15px;
+}
+
+.contact_form form button {
+  font-size: 16px;
+  border: 2px solid #4cffa5;
+  background-color: transparent;
+  padding: 10px 25px 12px 25px;
+  font-family: "font-r";
+  color: #4cffa5;
+}
+
+@media (max-width: 880px) {
+  #contact .contact_info .contact_info_sub div {
+    width: calc(50% - 20px);
+  }
+  #contact .contact_info .contact_info_sub div:nth-child(1) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  #contact .contact_info {
+    margin: 0 35px;
+  }
+  #contact .contact_info .contact_info_sub {
+    display: block;
+  }
+  #contact .contact_info .contact_info_sub div {
+    display: block;
+    padding: 25px;
+    width: calc(100% - 70px);
+  }
+  #contact .contact_info .contact_info_sub div:nth-child(2) {
+    margin-top: 70px;
+  }
+  #contact .contact_form {
+    margin: 0 35px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

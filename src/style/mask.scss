@@ -1,0 +1,63 @@
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4CFFA5;
+$dColor: #ffffff;
+
+#mask {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  z-index: -1;
+  pointer-events: none;
+  div {
+    width: 285px;
+    border-right: 1.5px solid #212121;
+    &:nth-child(1) {
+      border-left: 1.5px solid #212121;
+    }
+  }
+
+  // &:before {
+  //   background-image: url("../elements/index.png");
+  //   position: absolute;
+  //   content: "";
+  //   height: 300%;
+  //   width: 300%;
+  //   left: -100%;
+  //   top: -100%;
+  //   animation-name: grained;
+  //   animation-iteration-count: infinite;
+  //   animation-duration: 0.5s;
+  //   animation-timing-function: steps(20);
+  // }
+}
+
+@media (max-width: 930px) {
+  #mask {
+    div {
+      &:nth-child(1) {
+      border-left: 1.5px solid transparent;
+      }
+      &:nth-child(3) {
+        border-right: 1.5px solid transparent;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 750px) {
+  #mask {
+    div {
+      width: 0;
+      &:nth-child(1),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}

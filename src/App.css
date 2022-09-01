@@ -1,0 +1,42 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #101010;
+  border-left: 0.5px solid #404040;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: white;
+  padding: 0 2px;
+  opacity: 0.2;
+}
+
+*:focus {
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+html {
+  background-color: #101010;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+}

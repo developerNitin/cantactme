@@ -1,0 +1,156 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4cffa5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#blog_page {
+  .blog_page_top_img {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 100vh;
+    }
+    img {
+      width: 100%;
+      position: fixed;
+      filter: brightness(0.6);
+    }
+  }
+}
+
+@media (max-width: 1470px) {
+  #blog_page {
+    .blog_page_top_img {
+      img {
+        height: 100vh;
+        width: auto;
+      }
+    }
+  }
+}
+
+.blog_page_top_section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 90px;
+    z-index: 1;
+    margin: 0 auto;
+    font-family: $fontB;
+  }
+}
+
+.blog_page_container {
+  overflow: hidden;
+}
+
+.blog_page_description_container {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0px;
+  position: relative;
+  z-index: 0;
+  background-color: $aColor;
+}
+
+.blog_page_description {
+  padding: 35px;
+  margin: 0 30px;
+  border: 1.5px solid #212121;
+  max-width: 788px;
+  background-color: $aColor;
+  font-family: $fontR;
+  color: $bColor;
+  h1 {
+    color: $dColor;
+  }
+  p{
+    line-height: 23px;
+  }
+  a {
+    color: $cColor;
+  }
+  span {
+    font-family: $fontS;
+  }
+  ul {
+    padding-left: 20px;
+    list-style: none;
+    li {
+      &::before {
+        content: "\2022";
+        color: $cColor;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        margin-bottom: 6px;
+      }
+    }
+  }
+  footer {
+    .by_admin {
+      a {
+        &:nth-child(4) {
+          color: $dColor;
+        }
+      }
+    }
+    .tags {
+      a {
+        text-decoration: none;
+        padding: 0 5px 3px 5px;
+        border: 1px solid $cColor;
+        margin-left: 10px;
+      }
+    }
+  }
+  .blog_page_testimonial {
+    border-left: 2px solid $cColor;
+    padding-left: 20px;
+    font-family: $fontL;
+    span {
+      font-family: $fontL;
+    }
+  }
+  .blog_page_description_gallery {
+    img {
+      max-width: calc(50% - 10px);
+      height: auto;
+      &:nth-child(1) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .blog_page_top_section {
+    h1 {
+      font-size: 38px;
+    }
+  }
+  .blog_page_description {
+    padding: 25px;
+  }
+}

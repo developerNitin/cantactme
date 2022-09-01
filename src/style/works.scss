@@ -1,0 +1,114 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+$xxlFont: 64px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4cffa5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#works, #contact, #resume, #blogs {
+  max-width: 861px;
+  padding: 0 30px;
+  margin: 0 auto;
+  .works_topbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 47vh;
+    width: 100%;
+    padding-top: 140px;
+    font-family: $fontM;
+    h1 {
+      margin: 0;
+      margin-left: 33px;
+      font-size: 44px;
+      margin-bottom: 7px;
+    }
+    div {
+      margin-left: 35px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.works_filter_menu {
+  display: flex;
+  padding: 35px;
+  margin-bottom: 70px;
+  border: 1.5px solid #1d1d1d;
+  background-color: $aColor;
+  div {
+    margin-right: 25px;
+    font-size: $mFont;
+    font-family: $fontR;
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+.projects_grid {
+  .projects_grid_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      max-width: 377.5px;
+      margin-bottom: 70px;
+      text-align: center;
+      &:nth-child(1) {
+        margin-right: 30px;
+      }
+      img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: $lFont;
+        margin: 25px 0 10px 0;
+        font-family: $fontM;
+      }
+      p {
+        font-size: $sFont;
+        margin: 0;
+        padding: 0;
+        color: $bColor;
+        font-family: $fontR;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  #works, #contact, #resume, #blogs {
+    padding: 0;
+  }
+  .projects_grid {
+    .projects_grid_items {
+      flex-direction: column;
+      margin: 0 35px;
+      div {
+        max-width: none;
+        width: 100%;
+        &:nth-child(1) {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

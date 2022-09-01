@@ -1,0 +1,124 @@
+// font-size
+$sFont: 14px;
+$mFont: 16px;
+$lFont: 24px;
+$xlFont: 44px;
+
+// theme-color
+$aColor: #101010;
+$bColor: #bbbbbb;
+$cColor: #4cffa5;
+$dColor: #ffffff;
+
+// Font-family
+$fontB: "font-b";
+$fontL: "font-l";
+$fontM: "font-m";
+$fontR: "font-r";
+$fontS: "font-s";
+
+#contact {
+  .contact_info {
+    margin-bottom: 70px;
+    font-size: $mFont;
+    .contact_info_sub {
+      display: flex;
+      justify-content: space-between;
+      div {
+        padding: 35px;
+        border: 1.5px solid #212121;
+        width: 322px;
+        text-align: center;
+        font-family: $fontR;
+        margin-top: 70px;
+        background-color: $aColor;
+        p {
+          margin-top: 0;
+        }
+        span {
+          color: $bColor;
+        }
+      }
+      &:nth-child(1) {
+        div {
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+}
+
+.contact_form {
+  padding: 35px;
+  border: 1.5px solid #212121;
+  background-color: $aColor;
+  margin-bottom: 70px;
+
+  form {
+    input,
+    textarea {
+      color: $dColor;
+      height: 49px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1.5px solid #212121;
+      width: 100%;
+      font-size: $mFont;
+      transition: 0.5s all ease;
+      margin-bottom: 30px;
+      &:focus {
+        border-bottom: 1.5px solid $cColor;
+      }
+    }
+    textarea {
+      height: 102px;
+      padding-top: 15px;
+
+    }
+    button {
+      font-size: $mFont;
+      border: 2px solid $cColor;
+      background-color: transparent;
+      padding: 10px 25px 12px 25px;
+      font-family: $fontR;
+      color: $cColor;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  #contact {
+    .contact_info {
+      .contact_info_sub {
+        div {
+          width: calc(50% - 20px);
+          &:nth-child(1) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  #contact {
+    .contact_info {
+      margin: 0 35px;
+      .contact_info_sub {
+        display: block;
+        div {
+          display: block;
+          padding: 25px;
+          width: calc(100% - 70px);
+          &:nth-child(2) {
+            margin-top: 70px;
+          }
+        }
+      }
+    }
+    .contact_form {
+      margin: 0 35px;
+    }
+  }
+}
