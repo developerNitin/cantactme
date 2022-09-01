@@ -37,6 +37,7 @@
 
 @media (max-width: 750px) {
   #onLoad {
+  display: none;
     div {
       &:nth-child(1) {
         display: none;
