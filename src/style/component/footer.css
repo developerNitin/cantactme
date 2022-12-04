@@ -119,6 +119,7 @@
   background-color: #1e1e1e;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
+  border-right: 0;
 }
 
 #footer .signup_form button {

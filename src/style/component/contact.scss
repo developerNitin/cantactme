@@ -18,6 +18,11 @@ $fontR: "font-r";
 $fontS: "font-s";
 
 #contact {
+  .works_topbar {
+    h1 {
+      font-size: 34px;
+    }
+  }
   .contact_info {
     margin-bottom: 70px;
     font-size: $mFont;

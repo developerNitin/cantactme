@@ -37,10 +37,6 @@
   transition: 0.5s all ease;
 }
 
-.header_logo a:hover {
-  margin-top: -80px;
-}
-
 .header_logo h1 {
   margin: 0;
   height: 40px;
@@ -108,15 +104,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.link_list ul li a:hover {
-  margin-top: -40px;
-  color: #ffffff;
-}
-
-.link_list ul li a:hover span::after {
-  opacity: 1;
 }
 
 .mobile_navbar_button {
@@ -228,11 +215,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#mobile_link_list ul li a:hover {
-  margin-top: -45px;
-  color: #ffffff;
 }
 
 @media (max-width: 1020px) {

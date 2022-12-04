@@ -11,8 +11,8 @@ class Contact extends Component {
     return (
       <div id="contact">
         <div className="works_topbar">
-          <h1>Contact</h1>
-          <div>
+          <h1>Rajnish Kumar</h1>
+          {/* <div>
             <Typed
               strings={textLines}
               loop
@@ -21,7 +21,7 @@ class Contact extends Component {
               smartBackspace={0}
               cursorChar="."
             />
-          </div>
+          </div> */}
         </div>
         <div className="works_filter_menu blog_filter_menu">
           <h1>Contacts info</h1>
@@ -48,7 +48,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-        <div className="works_filter_menu blog_filter_menu">
+        {/* <div className="works_filter_menu blog_filter_menu">
           <h1>Contacts Form</h1>
         </div>
         <div className="contact_form">
@@ -58,7 +58,7 @@ class Contact extends Component {
             <textarea style={{fontFamily: "arial"}} cols="40" rows="10" aria-invalid="false" aria-required="true" placeholder="Message"></textarea>
             <button>Send Message</button>
           </form>
-        </div>
+        </div> */}
       </div>
     );
   }
